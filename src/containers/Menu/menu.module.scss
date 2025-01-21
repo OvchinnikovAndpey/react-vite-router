@@ -1,0 +1,46 @@
+@use '@styles/_variables' as *;
+
+.menu {
+  display: flex;
+  gap: $spacingLarge;
+  align-items: center;
+  justify-content: center;
+  padding: $spacingMedium;
+
+  &__item {
+    color: $backgroundColor;
+    text-decoration: none;
+    font-size: $baseFontSize;
+    font-weight: $fontWeightMedium;
+    padding: $spacingSmall $spacingMedium;
+    border-radius: $borderRadiusBase;
+    transition: $transitionBase;
+    font-family: $fontFamily;
+
+    &:hover {
+      color: #1d283a;
+      background-color: rgba($accent, 0.1);
+    }
+
+    &.active {
+      color: $accent;
+      background-color: rgba($accent, 0.15);
+    }
+  }
+
+  a {
+    color: $backgroundColor;
+    text-decoration: none;
+    font-size: $baseFontSize;
+    padding: $spacingSmall $spacingMedium;
+    transition: $transitionBase;
+
+    &:hover {
+      color: #4f4e83;
+    }
+
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+}
