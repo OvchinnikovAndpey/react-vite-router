@@ -1,0 +1,13 @@
+@use '@styles/_variables' as *;
+
+.card {
+  border: $buttonBorderWidth solid #ccc;
+  border-radius: $borderRadiusBase;
+  padding: $spacingMedium;
+  margin: $spacingMedium 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  margin: calc($spacingBase + 2px) 0;
+}
