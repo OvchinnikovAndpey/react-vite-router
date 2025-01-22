@@ -4,15 +4,20 @@ import Card from '../../containers/Card/Card';
 import LoginForm from '../../screens/LoginForm/LoginForm';
 import { LoginPageProps } from './types';
 
-const LoginPage: React.FC<LoginPageProps> = ({ data, error, onSubmit }) => {
+const LoginPage: React.FC<LoginPageProps> = ({ data, error }) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  const handleSubmit = () => {
+    console.log('Email:', email);
+    console.log('Password:', password);
+  };
 
   return (
     <Section>
       <Card>
         <LoginForm 
-          onSubmit={onSubmit}
+          onSubmit={handleSubmit}
           email={email}
           password={password}
           onEmailChange={setEmail}

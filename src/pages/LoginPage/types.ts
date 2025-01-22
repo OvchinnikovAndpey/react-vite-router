@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export interface LoginPageProps {
-  data: LoginPageData | null;
-  error: string | null;
+  data?: LoginPageData | null;
+  error?: string | null;
   onSubmit: (email: string, password: string) => void;
 }
 

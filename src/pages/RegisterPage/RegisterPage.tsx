@@ -20,9 +20,15 @@ const RegisterPage: React.FC = () => {
             .catch((err) => setError(err instanceof Error ? err.message : String(err)));
     }, []);
 
-	function handleRegisterSubmit(name: string, email: string, password: string, confirmPassword: string): void {
-		throw new Error('Function not implemented.');
-	}
+    function handleRegisterSubmit(name: string, email: string, password: string, confirmPassword: string): void {
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+        // Implement your registration logic here
+        console.log('Registration data:', { name, email, password });
+        alert(`Registration successful for ${name}!`);
+    }
 
     return (
         <Section>
