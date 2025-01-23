@@ -1,0 +1,71 @@
+@use '@styles/_variables' as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: $spacingMedium;
+	width: 100%;
+	max-width: 400px;
+	padding: $spacingLarge;
+
+	// Стили для полей внутри формы
+	:global {
+		.field {
+			width: 100%;
+			margin-bottom: $spacingBase;
+		}
+
+		.input {
+			width: 100%;
+			padding: $spacingBase;
+			border: $buttonBorderWidth solid rgba($fontColor, 0.1);
+			border-radius: $borderRadiusBase;
+			font-family: $fontFamily;
+			font-size: $baseFontSize;
+			color: $fontColor;
+			transition: $transitionBase;
+
+			&:focus {
+				border-color: $accent;
+				outline: none;
+			}
+
+			&::placeholder {
+				color: rgba($fontColor, 0.5);
+			}
+		}
+
+		.label {
+			display: block;
+			margin-bottom: $spacingSmall;
+			font-family: $fontFamily;
+			font-size: $baseFontSize;
+			font-weight: $fontWeightMedium;
+			color: $fontColor;
+		}
+
+		.error {
+			margin-top: $spacingSmall;
+			color: red;
+			font-size: 14px;
+		}
+	}
+
+	// Стили для кнопки отправки
+	button[type='submit'] {
+		margin-top: $spacingMedium;
+		padding: $buttonPadding $spacingLarge;
+		background-color: $accent;
+		color: $backgroundColor;
+		border: none;
+		border-radius: $borderRadiusBase;
+		font-family: $fontFamily;
+		font-weight: $fontWeightMedium;
+		cursor: pointer;
+		transition: $transitionBase;
+
+		&:hover {
+			background-color: darken($accent, 10%);
+		}
+	}
+}

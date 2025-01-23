@@ -1,8 +1,29 @@
 {
+  "titles": {
+    "languageSwitch": "Language Switch",
+    "authorization": "Authorization"
+  },
   "demo": {
-    "welcomeUser": "Welcome, {{user}}!",
     "logIn": "Log in",
-    "logOut": "Log out",
     "signUp": "Sign up"
+  },
+  "form": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "email@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Your password",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "registerButton": "Register!"
+  },
+  "navigation": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Register"
+  },
+  "common": {
+    "logo": "Registrator..."
   }
 }

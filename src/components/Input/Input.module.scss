@@ -1,0 +1,21 @@
+@use '@styles/_variables' as *;
+
+.input {
+	width: 100%;
+	padding: $spacingBase;
+	border: $buttonBorderWidth solid rgba($fontColor, 0.1);
+	border-radius: $borderRadiusBase;
+	font-family: $fontFamily;
+	font-size: $baseFontSize;
+	color: $fontColor;
+	transition: $transitionBase;
+
+	&:focus {
+		border-color: $accent;
+		outline: none;
+	}
+
+	&::placeholder {
+		color: rgba($fontColor, 0.5);
+	}
+}

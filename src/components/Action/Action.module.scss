@@ -1,0 +1,71 @@
+@use '@styles/_variables' as *;
+
+.action {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-family: $fontFamily;
+	font-size: $baseFontSize;
+	font-weight: $fontWeightRegular;
+	color: $fontColor;
+	transition: $transitionBase;
+
+	&--primary {
+		background-color: $backgroundColor;
+		border: $buttonBorderWidth solid $accent;
+		color: $accent;
+		border-radius: $borderRadiusBase;
+		margin: $buttonMargin;
+		padding: $buttonPadding;
+		font-weight: $fontWeightMedium;
+
+		&:hover,
+		&:focus {
+			background-color: $accent;
+			color: $backgroundColor;
+		}
+	}
+
+	&--secondary {
+		background-color: transparent;
+		border: $buttonBorderWidth solid $fontColor;
+		border-radius: $borderRadiusBase;
+		margin: $buttonMargin;
+		padding: $buttonPadding;
+
+		&:hover,
+		&:focus {
+			border-color: $accent;
+			color: $accent;
+		}
+	}
+
+	&--text {
+		background-color: transparent;
+		border: none;
+		margin: $buttonMargin;
+		padding: $buttonPadding;
+
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
+	}
+
+	&--sm {
+		font-size: calc($baseFontSize - 2px);
+	}
+	&--md {
+		font-size: $baseFontSize;
+	}
+	&--lg {
+		font-size: calc($baseFontSize + 2px);
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+}

@@ -1,0 +1,65 @@
+@use '@styles/_variables' as *;
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: $spacingSmall;
+	width: 100%;
+
+	&__label {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		font-size: calc($baseFontSize - 2px);
+		font-weight: $fontWeightMedium;
+		color: $fontColor;
+	}
+
+	&__required {
+		color: #ff3b30;
+	}
+
+	&__input {
+		height: 40px;
+		padding: 0 $spacingMedium;
+		border: $buttonBorderWidth solid #e0e0e0;
+		border-radius: $borderRadiusBase;
+		font-size: $baseFontSize;
+		transition: $transitionBase;
+		font-family: $fontFamily;
+
+		&::placeholder {
+			color: #999;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $accent;
+			box-shadow: 0 0 0 $buttonBorderWidth rgba($accent, 0.2);
+		}
+
+		&:disabled {
+			background-color: #f5f5f5;
+			cursor: not-allowed;
+		}
+
+		&--error {
+			border-color: #ff3b30;
+
+			&:focus {
+				border-color: #ff3b30;
+				box-shadow: 0 0 0 $buttonBorderWidth rgba(#ff3b30, 0.2);
+			}
+		}
+	}
+
+	&__helper {
+		font-size: calc($baseFontSize - 4px);
+		color: $fontColor;
+	}
+
+	&__error {
+		font-size: calc($baseFontSize - 4px);
+		color: #ff3b30;
+	}
+}

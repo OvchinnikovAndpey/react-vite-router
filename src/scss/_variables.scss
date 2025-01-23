@@ -1,0 +1,36 @@
+:root {
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+}
+
+// Font
+$fontFamily: PT-Root-UI-VF, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$baseFontSize: 16px;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+
+// Colors
+$backgroundColor: #ffffff;
+$fontColor: #58646a;
+$accent: #0066ff;
+
+// Transitions
+$transitionBase: all 0.2s ease;
+
+// Spacing
+$spacingBase: 10px;
+$spacingSmall: 8px;
+$spacingMedium: 16px;
+$spacingLarge: 24px;
+
+// Border radius
+$borderRadiusBase: 20px;
+
+// Component specific
+$buttonPadding: $spacingBase;
+$buttonMargin: $spacingBase;
+$buttonBorderWidth: 2px;

@@ -1,0 +1,18 @@
+@use '@styles/_variables' as *;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $spacingMedium;
+	background-color: $accent;
+	color: $backgroundColor;
+}
+
+.logo {
+	font-size: calc($baseFontSize * 1.5);
+	font-weight: $fontWeightMedium;
+	color: $backgroundColor;
+	font-family: $fontFamily;
+	transition: $transitionBase;
+}

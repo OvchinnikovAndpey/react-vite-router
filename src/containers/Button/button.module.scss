@@ -1,0 +1,110 @@
+@use '@styles/_variables' as *;
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: calc($spacingBase * 1.5) 0;
+	gap: $spacingSmall;
+	border: none;
+	border-radius: $borderRadiusBase;
+	cursor: pointer;
+	font-weight: $fontWeightMedium;
+	transition: $transitionBase;
+	text-decoration: none;
+	font-family: $fontFamily;
+
+	&--filled {
+		&.button--primary {
+			background: transparent;
+			color: $accent;
+			border: $buttonBorderWidth solid $accent;
+
+			&:hover {
+				background: $accent;
+				color: $backgroundColor;
+			}
+		}
+
+		&.button--secondary {
+			background: #e0e0e0;
+			color: $fontColor;
+
+			&:hover {
+				background: #cccccc;
+			}
+		}
+	}
+
+	&--outlined {
+		background: transparent;
+
+		&.button--primary {
+			border: $buttonBorderWidth solid $accent;
+			color: $accent;
+
+			&:hover {
+				background: rgba($accent, 0.1);
+			}
+		}
+
+		&.button--secondary {
+			border: $buttonBorderWidth solid #e0e0e0;
+			color: $fontColor;
+
+			&:hover {
+				background: rgba(#e0e0e0, 0.2);
+			}
+		}
+	}
+
+	&--sm {
+		height: 32px;
+		padding: 0 $spacingMedium;
+		font-size: calc($baseFontSize - 2px);
+	}
+
+	&--md {
+		height: 40px;
+		padding: 0 calc($spacingBase * 2.4);
+		font-size: $baseFontSize;
+	}
+
+	&--lg {
+		height: 48px;
+		padding: 0 calc($spacingBase * 3.2);
+		font-size: calc($baseFontSize + 2px);
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	&--loading {
+		position: relative;
+		cursor: wait;
+		pointer-events: none;
+	}
+}
+
+.button__loader {
+	position: absolute;
+	width: $spacingMedium;
+	height: $spacingMedium;
+	border: $buttonBorderWidth solid currentColor;
+	border-radius: 50%;
+	border-right-color: transparent;
+	animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
