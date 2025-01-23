@@ -1,13 +1,13 @@
 @use '@styles/_variables' as *;
 
 .container {
-  display: flex;
-  gap: $spacingBase;
-  justify-content: center;
+	display: flex;
+	gap: $spacingBase;
+	justify-content: center;
 }
 
 .button {
-  min-width: 80px;
-  font-family: $fontFamily;
-  border-radius: $borderRadiusBase;
+	min-width: 80px;
+	font-family: $fontFamily;
+	border-radius: $borderRadiusBase;
 }

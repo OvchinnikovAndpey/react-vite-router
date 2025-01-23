@@ -1,38 +1,38 @@
 @use '@styles/_variables' as *;
 
 .container {
-  margin-bottom: calc($spacingLarge + $spacingBase);
+	margin-bottom: calc($spacingLarge + $spacingBase);
 }
 
 .title {
-  text-align: center;
-  margin-bottom: $spacingMedium;
-  font-size: calc($baseFontSize + 2px);
-  color: $fontColor;
-  font-family: $fontFamily;
-  font-weight: $fontWeightMedium;
+	text-align: center;
+	margin-bottom: $spacingMedium;
+	font-size: calc($baseFontSize + 2px);
+	color: $fontColor;
+	font-family: $fontFamily;
+	font-weight: $fontWeightMedium;
 }
 
 .languageSelector {
-  display: flex;
-  gap: $spacingMedium;
-  justify-content: center;
+	display: flex;
+	gap: $spacingMedium;
+	justify-content: center;
 
-  button {
-    min-width: calc($spacingBase * 8);
-    padding: $spacingSmall $spacingMedium;
-    font-size: calc($baseFontSize - 2px);
-  }
+	button {
+		min-width: calc($spacingBase * 8);
+		padding: $spacingSmall $spacingMedium;
+		font-size: calc($baseFontSize - 2px);
+	}
 }
 
 .authButtons {
-  display: flex;
-  gap: $spacingMedium;
-  justify-content: center;
+	display: flex;
+	gap: $spacingMedium;
+	justify-content: center;
 
-  button {
-    min-width: calc($spacingBase * 10);
-    padding: $spacingBase $spacingLarge;
-    font-size: $baseFontSize;
-  }
+	button {
+		min-width: calc($spacingBase * 10);
+		padding: $spacingBase $spacingLarge;
+		font-size: $baseFontSize;
+	}
 }

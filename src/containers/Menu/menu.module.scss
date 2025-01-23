@@ -1,52 +1,53 @@
 @use '@styles/_variables' as *;
 
 .menu {
-  display: flex;
-  gap: $spacingLarge;
-  align-items: center;
-  justify-content: center;
-  padding: $spacingMedium;
+	display: flex;
+	gap: $spacingLarge;
+	align-items: center;
+	justify-content: center;
+	padding: $spacingMedium;
 
-  &__item {
-    color: $backgroundColor;
-    text-decoration: none;
-    font-size: $baseFontSize;
-    font-weight: $fontWeightMedium;
-    padding: $spacingSmall $spacingMedium;
-    border-radius: $borderRadiusBase;
-    transition: $transitionBase;
-    font-family: $fontFamily;
-    border: 2px solid #000;
+	&__item {
+		color: $backgroundColor;
+		text-decoration: none;
+		font-size: $baseFontSize;
+		font-weight: $fontWeightMedium;
+		padding: $spacingSmall $spacingMedium;
+		border-radius: $borderRadiusBase;
+		transition: $transitionBase;
+		font-family: $fontFamily;
+		border: 2px solid #000;
 
-    &:hover {
-      color: #000;
-      background-color: #fff;
-    }
+		&:hover {
+			color: #000;
+			background-color: #fff;
+		}
 
-    &:active {
-      background-color: #4f4e83;
-      color: #fff;
-    }
+		&:active {
+			background-color: #4f4e83;
+			color: #fff;
+		}
 
-    &.active {
-      color: $accent;
-      background-color: rgba($accent, 0.15);
-    }
-  }
+		&.active {
+			color: $accent;
+			background-color: rgba($accent, 0.15);
+		}
+	}
 
-  a {
-    color: $backgroundColor;
-    text-decoration: none;
-    font-size: $baseFontSize;
-    padding: $spacingSmall $spacingMedium;
-    transition: $transitionBase;
+	a {
+		color: $backgroundColor;
+		text-decoration: none;
+		font-size: $baseFontSize;
+		padding: $spacingSmall $spacingMedium;
+		transition: $transitionBase;
 
-    &:hover {
-      color: #4f4e83;
-    }
+		&:hover {
+			color: #4f4e83;
+		}
 
-    &:focus, &:active {
-      outline: none;
-    }
-  }
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
 }

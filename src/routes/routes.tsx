@@ -1,11 +1,9 @@
-import MainPage from '@/pages/MainPage/MainPage';
-import LoginPage from '@/pages/LoginPage/LoginPage';
-import RegisterPage from '@/pages/RegisterPage/RegisterPage';
+import main from '../pages/MainPage';
+import login from '../pages/LoginPage';
+import register from '../pages/RegisterPage';
 
 export const routes = [
-	{ index: true, element: <MainPage /> },
-	{ path: '/register', element: <RegisterPage /> },
-	{ path: '/login', element: <LoginPage onSubmit={function (email: string, password: string): void {
-		throw new Error('Function not implemented.');
-	} }  /> }
+	{ index: true, ...main },
+	{ path: '/login', ...login },
+	{ path: '/register', ...register },
 ];
