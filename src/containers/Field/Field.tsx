@@ -1,34 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import styles from './Field.module.scss';
-import { FieldProps } from './types';
 
-export const Field = React.forwardRef<HTMLInputElement, FieldProps>(({
-  value,
+interface FieldProps {
+  label: string;
+  name: string;
+  required?: boolean;
+  className?: string;
+  error?: string;
+  helperText?: string;
+  children: React.ReactNode;
+}
+
+export const Field: React.FC<FieldProps> = ({
   label,
   name,
-  type = 'text',
-  placeholder,
-  onChange,
-  className,
-  disabled,
   required,
+  className,
   error,
-  helperText
-}, ref) => {
-  const [inputValue, setInputValue] = useState(value);
-
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setInputValue(event.target.value);
-    onChange?.(event);
-  };
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
+  helperText,
+  children
+}) => {
   return (
     <div className={clsx(styles.field, className)}>
       <label className={styles.field__label} htmlFor={name}>
@@ -36,19 +28,13 @@ export const Field = React.forwardRef<HTMLInputElement, FieldProps>(({
         {required && <span className={styles.field__required}>*</span>}
       </label>
       
-      <input
-        ref={ref}
-        id={name}
-        type={type}
-        name={name}
-        value={inputValue}
-        onChange={handleChange}
-        placeholder={placeholder}
-        disabled={disabled}
-        className={clsx(styles.field__input, {
+      {React.cloneElement(children as React.ReactElement, {
+        id: name,
+        name,
+        className: clsx(styles.field__input, {
           [styles['field__input--error']]: error
-        })}
-      />
+        })
+      })}
 
       {helperText && (
         <span className={styles.field__helper}>{helperText}</span>
@@ -59,6 +45,6 @@ export const Field = React.forwardRef<HTMLInputElement, FieldProps>(({
       )}
     </div>
   );
-});
+};
 
 Field.displayName = 'Field';

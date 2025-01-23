@@ -1,3 +1,5 @@
+import { InputHTMLAttributes } from 'react';
+
 export interface FieldProps {
     /** Значение поля */
     value: string;
@@ -9,7 +11,7 @@ export interface FieldProps {
     name: string;
     
     /** Тип поля ввода */
-    type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'search';
+    type?: InputHTMLAttributes<HTMLInputElement>['type'];
     
     /** Текст подсказки */
     placeholder?: string;

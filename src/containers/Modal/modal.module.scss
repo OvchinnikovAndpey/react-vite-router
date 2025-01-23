@@ -21,6 +21,9 @@
   max-width: 500px;
   width: 100%;
   font-family: $fontFamily;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-close {
@@ -37,4 +40,8 @@
 .modal-body {
   margin-top: $spacingLarge;
   color: $fontColor;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
